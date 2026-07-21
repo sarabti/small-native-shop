@@ -2,18 +2,20 @@ import SafeAreaView from "@/components/SafeAreaView";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Text } from "@/components/ui/text";
-import useAuth from "@/hooks/useAuth";
+import { signIn } from "@/store/authSlice";
+import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import React, { useState } from "react";
 import { ActivityIndicator, View } from "react-native";
 
 export default function SignInScreen() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const { signIn, isLoading, error } = useAuth();
+  const dispatch = useAppDispatch();
+  const { isLoading, error } = useAppSelector((state) => state.auth);
 
   const handleSubmit = async () => {
     if (!username || !password) return;
-    await signIn(username, password);
+    dispatch(signIn({ username, password }));
   };
 
   return (

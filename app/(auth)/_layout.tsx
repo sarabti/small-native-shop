@@ -1,8 +1,8 @@
-import useAuth from "@/hooks/useAuth";
+import { useAppSelector } from "@/store/hooks";
 import { Redirect, Stack } from "expo-router";
 
 export default function AuthRoutesLayout() {
-  const { isSignedIn } = useAuth();
+  const isSignedIn = useAppSelector((state) => state.auth.isSignedIn);
 
   if (isSignedIn) {
     return <Redirect href="/" />;
