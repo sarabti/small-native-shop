@@ -1,4 +1,5 @@
 import { useCallback, useState } from "react";
+import { Alert } from "react-native";
 
 interface UseAuthReturn {
   isSignedIn: boolean;
@@ -23,10 +24,12 @@ export default function useAuth(): UseAuthReturn {
     if (username === "admin" && password === "admin123") {
       setIsSignedIn(true);
       setIsLoading(false);
+      Alert.alert("signed In!");
       return true;
     } else {
       setError("Invalid username or password");
       setIsLoading(false);
+      Alert.alert("some problems while signing in...");
       return false;
     }
   }, []);
