@@ -3,3 +3,19 @@
 @import "tailwindcss/utilities.css";
 
 @import "nativewind/theme";
+
+@theme {
+  --font-sans:
+    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono:
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --color-santas-gray: #a3a3aa;
+  --color-cobalt: #0041c0;
+  --color-cod-gray: #1c1b1b;
+  --color-scorpion: #5f5e5e;
+  --color-gun-powder: #434656;
+  --color-secondary: #f6f3f2;
+  --color-vistas-white: #fcf9f8;
+}
