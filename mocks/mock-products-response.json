@@ -2,37 +2,55 @@
   {
     "id": "1",
     "name": "Wireless Headphones",
+    "category": "Electronics",
+    "description": "High-quality wireless headphones with immersive sound and long battery life.",
     "price": 79.99,
-    "imageUrl": "https://picsum.photos/seed/headphones/400"
+    "rating": 4.6,
+    "thumbnail": "https://picsum.photos/seed/headphones/400"
   },
   {
     "id": "2",
     "name": "Smart Watch",
+    "category": "Wearables",
+    "description": "Feature-packed smartwatch with fitness tracking and smart notifications.",
     "price": 149.99,
-    "imageUrl": "https://picsum.photos/seed/watch/400"
+    "rating": 4.7,
+    "thumbnail": "https://picsum.photos/seed/watch/400"
   },
   {
     "id": "3",
     "name": "Running Shoes",
+    "category": "Footwear",
+    "description": "Comfortable and lightweight running shoes designed for daily training.",
     "price": 59.99,
-    "imageUrl": "https://picsum.photos/seed/shoes/400"
+    "rating": 4.5,
+    "thumbnail": "https://picsum.photos/seed/shoes/400"
   },
   {
     "id": "4",
     "name": "Backpack",
+    "category": "Accessories",
+    "description": "Durable backpack with multiple compartments for work, school, or travel.",
     "price": 39.99,
-    "imageUrl": "https://picsum.photos/seed/backpack/400"
+    "rating": 4.4,
+    "thumbnail": "https://picsum.photos/seed/backpack/400"
   },
   {
     "id": "5",
     "name": "Coffee Maker",
+    "category": "Home Appliances",
+    "description": "Compact coffee maker that brews rich and flavorful coffee in minutes.",
     "price": 89.99,
-    "imageUrl": "https://picsum.photos/seed/coffee/400"
+    "rating": 4.3,
+    "thumbnail": "https://picsum.photos/seed/coffee/400"
   },
   {
     "id": "6",
     "name": "Desk Lamp",
+    "category": "Home & Office",
+    "description": "Modern LED desk lamp with adjustable brightness for comfortable reading.",
     "price": 24.99,
-    "imageUrl": "https://picsum.photos/seed/lamp/400"
+    "rating": 4.2,
+    "thumbnail": "https://picsum.photos/seed/lamp/400"
   }
 ]

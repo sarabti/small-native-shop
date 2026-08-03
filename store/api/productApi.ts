@@ -1,12 +1,6 @@
+import { Product } from "@/types/product";
 import mockProducts from "../../mocks/mock-products-response.json";
 import { baseApi } from "./baseApi";
-
-export interface Product {
-  id: string;
-  name: string;
-  price: number;
-  imageUrl?: string;
-}
 
 const mockDelay = (ms = 600) =>
   new Promise((resolve) => setTimeout(resolve, ms));
