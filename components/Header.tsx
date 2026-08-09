@@ -1,8 +1,19 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { clsx } from "clsx";
 import React from "react";
-import { Text, View } from "react-native";
+import { Pressable, ScrollView, Text, View } from "react-native";
 
-const Header = () => {
+interface HeaderProps {
+  categories: string[];
+  categoryFilter: string;
+  handleFilterCategory: (cat: string) => void;
+}
+
+const Header = ({
+  categories,
+  categoryFilter,
+  handleFilterCategory,
+}: HeaderProps) => {
   const handleProfile = () => {
     // Handle profile icon press
   };
@@ -26,7 +37,29 @@ const Header = () => {
         <Text className="text-5xl font-bold tracking-tight text-cod-gray">
           The Modern Collective
         </Text>
-        {/* Categories */}
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          <View className="flex-row gap-4 mt-8">
+            {categories.map((category) => (
+              <Pressable
+                key={category}
+                className={clsx(
+                  `whitespace-nowrap px-6 py-3.5 rounded-2xl text-xs uppercase tracking-widest font-semibold`,
+                  categoryFilter === category ? "bg-cobalt" : "bg-secondary",
+                )}
+                onPress={() => handleFilterCategory(category)}
+              >
+                <Text
+                  className={clsx(
+                    `uppercase font-bold text-gun-powder`,
+                    categoryFilter === category && "text-white",
+                  )}
+                >
+                  {category}
+                </Text>
+              </Pressable>
+            ))}
+          </View>
+        </ScrollView>
       </View>
     </View>
   );
