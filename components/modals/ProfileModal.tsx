@@ -84,7 +84,7 @@ const ProfileModal = ({ isVisible, setIsVisible }: ProfileModalProps) => {
             {isLoading ? (
               <ActivityIndicator />
             ) : (
-              <Text className="text-primary-foreground">Update Profile</Text>
+              <Text className="text-primary-foreground">Save Profile</Text>
             )}
           </Button>
         </View>
