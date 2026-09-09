@@ -1,7 +1,8 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { clsx } from "clsx";
-import React from "react";
+import React, { useState } from "react";
 import { Pressable, ScrollView, Text, View } from "react-native";
+import ProfileModal from "./modals/ProfileModal";
 
 interface HeaderProps {
   categories: string[];
@@ -14,9 +15,12 @@ const Header = ({
   categoryFilter,
   handleFilterCategory,
 }: HeaderProps) => {
+  const [isProfileVisible, setIsProfileVisible] = useState(false);
+
   const handleProfile = () => {
-    // Handle profile icon press
+    setIsProfileVisible(true);
   };
+
   return (
     <View className="mb-12">
       <View className="flex-row items-center justify-between">
@@ -61,6 +65,10 @@ const Header = ({
           </View>
         </ScrollView>
       </View>
+      <ProfileModal
+        isVisible={isProfileVisible}
+        setIsVisible={setIsProfileVisible}
+      />
     </View>
   );
 };
