@@ -6,6 +6,7 @@
     "description": "High-quality wireless headphones with immersive sound and long battery life.",
     "price": 79.99,
     "rating": 4.6,
+    "reviews": 38,
     "thumbnail": "headphone"
   },
   {
@@ -15,6 +16,7 @@
     "description": "Feature-packed smartwatch with fitness tracking and smart notifications.",
     "price": 149.99,
     "rating": 4.7,
+    "reviews": 95,
     "thumbnail": "watch"
   },
   {
@@ -24,6 +26,7 @@
     "description": "Comfortable and lightweight running shoes designed for daily training.",
     "price": 59.99,
     "rating": 4.5,
+    "reviews": 67,
     "thumbnail": "shoes"
   },
   {
@@ -33,6 +36,7 @@
     "description": "Durable backpack with multiple compartments for work, school, or travel.",
     "price": 39.99,
     "rating": 4.4,
+    "reviews": 13,
     "thumbnail": "backpack"
   },
   {
@@ -42,6 +46,7 @@
     "description": "Compact coffee maker that brews rich and flavorful coffee in minutes.",
     "price": 89.99,
     "rating": 4.3,
+    "reviews": 38,
     "thumbnail": "coffee"
   },
   {
@@ -51,6 +56,7 @@
     "description": "Modern LED desk lamp with adjustable brightness for comfortable reading.",
     "price": 24.99,
     "rating": 4.2,
+    "reviews": 71,
     "thumbnail": "lamp"
   }
 ]

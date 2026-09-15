@@ -5,5 +5,6 @@ export interface Product {
   description: string;
   price: number;
   rating: number;
+  reviews: number;
   thumbnail: string;
 }

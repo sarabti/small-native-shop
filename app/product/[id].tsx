@@ -1,3 +1,4 @@
+import RatingStars from "@/components/RatingStars";
 import SafeAreaView from "@/components/SafeAreaView";
 import { productImages } from "@/lib/images";
 import { useGetProductDetailsQuery } from "@/store/api/productApi";
@@ -62,6 +63,12 @@ const ProductDetails = () => {
             <Text className="text-scorpion font-light text-3xl">
               ${product?.price}
             </Text>
+            <View className="flex-row items-center gap-2">
+              <RatingStars rating={product?.rating ?? 0} />
+              <Text className="text-sm uppercase tracking-widest font-semibold text-scorpion">
+                {product?.reviews ?? 0} Reviews
+              </Text>
+            </View>
           </View>
         </View>
       </ScrollView>
