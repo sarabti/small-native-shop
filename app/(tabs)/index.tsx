@@ -47,7 +47,14 @@ const Home = () => {
           columnWrapperStyle={{ justifyContent: "space-between" }}
           renderItem={({ item }) => (
             <View className="w-[48%] mb-10 gap-4">
-              <Pressable onPress={() => router.push(`/product/${item.id}`)}>
+              <Pressable
+                onPress={() =>
+                  router.push({
+                    pathname: "/product/[id]",
+                    params: { id: item.id },
+                  })
+                }
+              >
                 <Image
                   source={(productImages as any)[item.thumbnail]}
                   className="w-full h-62 rounded-2xl"

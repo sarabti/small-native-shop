@@ -22,7 +22,17 @@ export const productsApi = baseApi.injectEndpoints({
             ]
           : [{ type: "Products", id: "LIST" }],
     }),
+
+    getProductDetails: builder.query<Product, string>({
+      queryFn: async (productId: string) => {
+        await mockDelay();
+        return {
+          data: mockProducts.find(({ id }) => id === productId) as Product,
+        };
+      },
+      providesTags: (result, error, id) => [{ type: "Products", id }],
+    }),
   }),
 });
 
-export const { useGetProductsQuery } = productsApi;
+export const { useGetProductsQuery, useGetProductDetailsQuery } = productsApi;
