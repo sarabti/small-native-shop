@@ -70,6 +70,20 @@ const ProductDetails = () => {
               </Text>
             </View>
           </View>
+          <View className="gap-3 p-6 bg-secondary mt-8 rounded-xl">
+            <Text className="text-[11px] uppercase tracking-widest font-bold text-gun-powder">
+              The Narrative
+            </Text>
+            <Text className="text-scorpion text-xl leading-relaxed tracking-wide">
+              {product?.description}
+            </Text>
+          </View>
+          <Pressable className="w-full bg-cobalt rounded-lg py-6 items-center justify-center gap-4 flex-row mt-10">
+            <Ionicons name="bag" size={20} color="white" />
+            <Text className="text-white tracking-[0.2rem] uppercase font-bold text-base">
+              Add to Cart
+            </Text>
+          </Pressable>
         </View>
       </ScrollView>
     </SafeAreaView>
