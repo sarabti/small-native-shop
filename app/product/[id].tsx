@@ -16,10 +16,15 @@ import {
 
 const ProductDetails = () => {
   const { id } = useLocalSearchParams<{ id: string }>();
+  const [isWishListed, setIsWishListed] = React.useState(false);
 
   const { data: product, isLoading } = useGetProductDetailsQuery(id, {
     skip: !id,
   });
+
+  const toggleWishList = () => {
+    setIsWishListed((prev) => !prev);
+  };
 
   if (isLoading)
     return (
@@ -43,8 +48,14 @@ const ProductDetails = () => {
           <Text className="font-bold tracking-tighter text-4xl text-cod-gray">
             Curator
           </Text>
-          <Pressable className="bg-secondary p-4 rounded-2xl">
-            <Ionicons name="heart-outline" size={26} />
+          <Pressable
+            className="bg-secondary p-4 rounded-2xl"
+            onPress={toggleWishList}
+          >
+            <Ionicons
+              name={isWishListed ? "heart" : "heart-outline"}
+              size={26}
+            />
           </Pressable>
         </View>
         <View className="px-6 mt-6">
