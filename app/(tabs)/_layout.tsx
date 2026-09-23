@@ -29,9 +29,9 @@ const TabLayout = () => {
         }}
       />
       <Tabs.Screen
-        name="card"
+        name="cart"
         options={{
-          title: "Card",
+          title: "Cart",
           tabBarIcon: ({ color, size, focused }) => (
             <Ionicons
               name={focused ? "bag" : "bag-outline"}
